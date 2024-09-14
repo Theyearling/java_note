@@ -83,3 +83,21 @@
 
 ### interface
     声明为接口，接口中声明得属性，只能是public、静态和final的
+
+### bigDecimal
+    在需要精确的浮点数运算时，尽量使用bigDecimal类型的变量
+
+### 自动装箱的弊端
+    在一个循环中进行自动装箱操作时，可能出现创建多余的对象的情况，影响程序的性能
+
+### == 和 equals 
+    ==：比较的是两个字符串的内存地址（堆内存）的数值是否相等，属于数值比较
+    equals()：比较的是两个字符串的内容，属于内容比较
+    而对于非字符串变量来说，若没有对equals()进行重写的话，两种方法的作用是相同的，都是用来比较对象在堆内存中的首地址
+
+### String StringBuffer 和 StringBuild
+    String：声明位final class，是不可变字符串，多以苹姐字符串时会产生很多无用的中间对象，频繁操作时会影响性能
+    StringBuffer：解决了大量拼接字符串时产生很多中间对象的问题，提供append 和 add方法，是线程安全的
+    StringBuild：本质上与StringBuffer没有什么区别，去掉了线程安全的保证，减少了开销
+
+    速度-->  一般情况下 StringBuild > StringBuffer > String
