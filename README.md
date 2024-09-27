@@ -101,3 +101,22 @@
     StringBuild：本质上与StringBuffer没有什么区别，去掉了线程安全的保证，减少了开销
 
     速度-->  一般情况下 StringBuild > StringBuffer > String
+
+### HashMap 常用函数
+    get(key); // 根据键值获取对应的值
+    getOfDefault(key, default); // 根据键获取对应的值，若键不存在，则返回指定的默认值
+    put(key, value); // 将指定的键值对存储到HashMap中，如果键已经存在，则更新值
+    containsKey(key); // 判断是否存在指定的键值
+    containsValue(value); // 判断是否存在指定的值
+    remove(key); // 根据键值移除对应的键值对
+    size(); // 获取HashMap的大小，键值对数量
+    keySet(); // 获取HashMap中所有键的集合
+    values(); // 获取HashMap中所有的值集合
+    entrySet(); // 获取Hashmap中所有键值对的集合
+
+### 遍历HashMap
+    Map<String, Integer> mp = new HashMap<>();
+    for(Map.Entry<String, Integer> entry : mp.entrySet())
+
+    for(String key : mp.keySet())
+    
