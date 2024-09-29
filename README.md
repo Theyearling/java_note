@@ -102,6 +102,10 @@
 
     速度-->  一般情况下 StringBuild > StringBuffer > String
 
+### int 类型的 最大值 最小值
+    Integer.MAX_VALUE
+    Integer.MIN_VALUE
+
 ### HashMap 常用函数
     get(key); // 根据键值获取对应的值
     getOfDefault(key, default); // 根据键获取对应的值，若键不存在，则返回指定的默认值
@@ -120,3 +124,20 @@
 
     for(String key : mp.keySet())
     
+### 动态数组 ArrayList
+    ArrayList<Integer> num = ArrayList<>();
+    add(); // 添加元素
+    get(i); // 获取下标位i的元素
+    remove(index / object); // 移除 指定下标 / 指定元素 的元素
+    size(); // 获取大小
+    contains(); // 判断是否包含某元素
+    clear(); // 清空列表
+
+### Arrays 静态类方法
+    sort(T[] a); // 对数组进行排序
+    binarySearch(T[] a, T key); // 在排序数组中执行二分查找以找到指定的值
+    fill(T[] a, T val); // 用指定的值填充这个数组
+    equals(T[] a, T[] b); // 比较两个数组是否相等
+    copyOf(T[] original, int newLength); // 复制指定数组，截取或用null填充
+    asList(T ... a); // 返回一个固定大小的列表，其中包含指定数组中的元素
+    toString(T[] a); // 返回数组的字符串形式
