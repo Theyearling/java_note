@@ -141,3 +141,19 @@
     copyOf(T[] original, int newLength); // 复制指定数组，截取或用null填充
     asList(T ... a); // 返回一个固定大小的列表，其中包含指定数组中的元素
     toString(T[] a); // 返回数组的字符串形式
+
+### PriorityQueue 大小根堆
+    PriorityQueue<Integer> pq = new PriorityQueue<>(); // 小根堆
+    PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder); // 大根堆
+    add() / offer(); // 添加元素到堆中
+    poll(); // 获取并移除小根堆的头部，若为空，则返回null
+    peek(); // 获取但不移除小根堆的头部元素，若为空，则返回null
+    remove(); // 从堆中移除指定的元素
+    contains(); // 检查堆中是否存在指定元素
+    size(); // 获取堆中的元素个数
+
+### Collections 常用函数
+    sort(List<T> list); // 对列表进行升序排序
+    sort(List<T> list, Compare<T>(){}); // 使用自定义的比较器对列表进行排序
+    reverse(List<T> list); // 反转列表中的元素
+    replaceAll(List<T> list, T oldVal, T newVal); // 将列表中的所有旧值替换为新值
